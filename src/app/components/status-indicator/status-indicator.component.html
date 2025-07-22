@@ -1,0 +1,15 @@
+<div class="status-indicator" *ngIf="status !== 'idle'">
+    <div class="status-content">
+        <div class="loading-spinner" *ngIf="status !== 'error'">
+            <div class="spinner"></div>
+        </div>
+        <div class="error-icon" *ngIf="status === 'error'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M15 9l-6 6"></path>
+                <path d="M9 9l6 6"></path>
+            </svg>
+        </div>
+        <span class="status-text">{{ getStatusText() }}</span>
+    </div>
+</div>

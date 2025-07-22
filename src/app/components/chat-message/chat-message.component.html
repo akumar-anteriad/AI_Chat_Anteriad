@@ -1,0 +1,11 @@
+<div class="message-wrapper" [class.user-message]="message.isUser" [class.ai-message]="!message.isUser">
+    <div class="message-content">
+        <div class="message-bubble">
+            <!-- <p class="message-text">{{ message.content }}</p> -->
+             <p class="message-text" [innerHTML]="message.content"></p>
+            <div class="message-timestamp">
+                {{ message.timestamp | date:'short' }}
+            </div>
+        </div>
+    </div>
+</div>
